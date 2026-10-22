@@ -2,12 +2,35 @@ import { lazy, Suspense } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { ProtectedRoute } from './components/Layout';
 
-const p = (name) => lazy(() => import(`./pages/${name}.jsx`));
-const Welcome = p('Welcome'), Login = p('Login'), Register = p('Register'), VerifyPhone = p('VerifyPhone'), Forgot = p('ForgotPassword'), Legal = p('Legal');
-const Dashboard = p('Dashboard'), Convert = p('Convert'), Swap = p('Swap'), Wallet = p('Wallet'), Pay = p('Pay');
-const History = p('History'), TxDetail = p('TxDetail'), Notifications = p('Notifications'), Profile = p('Profile'), Admin = p('Admin') ;
-const Portfolio = p('Portfolio'), AssetDetail = p('AssetDetail'), Buy = p('Buy'), Withdraw = p('Withdraw'), BankAccounts = p('BankAccounts'), Kyc = p('Kyc'), Support = p('Support'), Security = p('Security'), Reset = p('ResetPassword');
-const AdminUsers = p('AdminUsers'), AdminTx = p('AdminTransactions'), AdminAudit = p('AdminAudit'), AdminKyc = p('AdminKyc');
+const Welcome = lazy(() => import('./pages/Welcome.jsx'));
+const Login = lazy(() => import('./pages/Login.jsx'));
+const Register = lazy(() => import('./pages/Register.jsx'));
+const VerifyPhone = lazy(() => import('./pages/VerifyPhone.jsx'));
+const Forgot = lazy(() => import('./pages/ForgotPassword.jsx'));
+const Legal = lazy(() => import('./pages/Legal.jsx'));
+const Dashboard = lazy(() => import('./pages/Dashboard.jsx'));
+const Convert = lazy(() => import('./pages/Convert.jsx'));
+const Swap = lazy(() => import('./pages/Swap.jsx'));
+const Wallet = lazy(() => import('./pages/Wallet.jsx'));
+const Pay = lazy(() => import('./pages/Pay.jsx'));
+const History = lazy(() => import('./pages/History.jsx'));
+const TxDetail = lazy(() => import('./pages/TxDetail.jsx'));
+const Notifications = lazy(() => import('./pages/Notifications.jsx'));
+const Profile = lazy(() => import('./pages/Profile.jsx'));
+const Admin = lazy(() => import('./pages/Admin.jsx'));
+const Portfolio = lazy(() => import('./pages/Portfolio.jsx'));
+const AssetDetail = lazy(() => import('./pages/AssetDetail.jsx'));
+const Buy = lazy(() => import('./pages/Buy.jsx'));
+const Withdraw = lazy(() => import('./pages/Withdraw.jsx'));
+const BankAccounts = lazy(() => import('./pages/BankAccounts.jsx'));
+const Kyc = lazy(() => import('./pages/Kyc.jsx'));
+const Support = lazy(() => import('./pages/Support.jsx'));
+const Security = lazy(() => import('./pages/Security.jsx'));
+const Reset = lazy(() => import('./pages/ResetPassword.jsx'));
+const AdminUsers = lazy(() => import('./pages/AdminUsers.jsx'));
+const AdminTx = lazy(() => import('./pages/AdminTransactions.jsx'));
+const AdminAudit = lazy(() => import('./pages/AdminAudit.jsx'));
+const AdminKyc = lazy(() => import('./pages/AdminKyc.jsx'));
 
 export default function App() {
   return (

@@ -11,6 +11,9 @@ npm run build            # output in dist/ (static hosting; SPA fallback to inde
 ```
 Development logins (mock data layer only): `muhammad@gmail.com` / `md2442`, admin `admin@konstanpay.demo` / `Admin@1234`, verification code `123456`.
 
+## Deploy (Vercel)
+See `docs/DEPLOY.md`. `vercel.json` is included (SPA rewrite, caching, security headers). `.env.production` ships with staging (test-data) settings so the first deploy works with no configuration; **switch it to live before release**.
+
 ## Mock vs live
 - `VITE_API_MODE=mock` – browser-only stand-in for the backend (`src/services/mock.js`) so the UI can be developed without an API. **A production build (`npm run build`) refuses to run in mock mode** and shows a "Service unavailable" screen.
 - `VITE_API_MODE=live` – real API via `src/services/live.js` + `src/services/http.js`. Set `VITE_API_BASE_URL` (or use the dev proxy: `DEV_API_PROXY_TARGET`).
